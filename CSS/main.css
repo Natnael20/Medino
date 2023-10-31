@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+button {
+    color: #fff;
+    background: linear-gradient(to right, #244cfd, #15e4fd);
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 12px 30px !important;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#row-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.first-col {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.second-col {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.phone, .message,  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 10px;
+}
+
+.phone > i, .message > i, .location > i {
+    color: rgb(158, 158, 158);
+}
+
+@media screen and (max-width: 999px) {
+    .phone p, .message p, .location p {
+        display: none;
+    }
+}
+
+.social i {
+    font-size: 1.2rem;
+    gap: 20px;
+    padding: 10px;
+}
+
+.social i:hover {
+    color: var(--primary);
+}
+
+.background {
+    background-image: url("https://preview.colorlib.com/theme/medino/assets/images/banner-bg.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    overflow: hidden;
+}
+
+#second-container {
+    margin-top: 10%;
+}
+
+.hospital-equipments:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#third-container {
+    margin-top: 10%;
+}
+
+#third-container > .row {
+    display: flex;
+    align-items: center;
+}
+
+#forth-container {
+    text-align: center;
+    margin-top: 10%;
+    height: 70vh;
+    display: grid;
+    place-content: center;
+}
+
+#signin {
+    background-color:var(--primary);
+    padding: 10px 70px;
+}
+
+.form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.form-control {
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+}
+
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+#sixth-container {
+    margin-top: 10%;
+}
+
+.specialist-info:hover {
+    color: #fff;
+    background: linear-gradient(to right, #244cfd, #15e4fd);
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 12px 30px !important;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#seventh-container {
+    margin-top: 10%;
+    position: relative;
+    background-image: url("https://preview.colorlib.com/theme/medino/assets/images/hotline-bg.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    overflow: hidden;
+}
+
+#seventh-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    opacity: .96;
+}
+
+#seventh-row > .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    height: 70vh;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #eighth-container > .row {
+        display: grid;
+        place-content: center;
+    }
+}
+
+.service > h4:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.service-img::before {
+    content: '22 July 2018';
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    width: 40%;
+    padding: 10px;
+    height: 20%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bff;
+}
+
+#footer-container {
+    margin-top: 10%;
+}
+
+.links {
+    display: grid;
+    line-height: 2;
+}
+
+.links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.links a:hover, .products p a:hover {
+    color: var(--primary);
+}
+
+.form-group form {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
