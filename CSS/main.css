@@ -39,7 +39,7 @@ body {
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
-button {
+.btn {
     color: #fff;
     background: linear-gradient(to right, #244cfd, #15e4fd);
     font-family: "Roboto",sans-serif;
@@ -174,12 +174,6 @@ textarea:focus {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 400;
-    display: inline-block;
-    padding: 12px 30px !important;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 #seventh-container {
@@ -238,9 +232,9 @@ textarea:focus {
     position: absolute;
     bottom: -20px;
     left: 40px;
-    width: 40%;
-    padding: 10px;
-    height: 20%;
+    width: 50%;
+    padding: 20px;
+    height: 25%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -253,7 +247,103 @@ textarea:focus {
 
 #footer-container {
     margin-top: 10%;
+
 }
+
+@media screen and (max-width: 768px) {
+    .last-container {
+        display: grid;
+    }
+}
+
+.sub-container {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+  }
+  
+  .sub-content {
+    width: 360px;
+    height: 40px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+    border-radius: 60px;
+    overflow: hidden;
+  }
+  
+  .subscription {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .subscription .add-email{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+  }
+  
+  .subscription .submit-email {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100% - 2px);
+    width: 100px;
+    border: none;
+    border-radius: 60px;
+    outline: none;
+    margin: 1px;
+    padding: 0 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #244cfd, #15e4fd);
+    color: #FFFFFF;
+    transition: width .35s ease-in-out,
+      background .35s ease-in-out;
+  }
+  
+  .subscription.done .submit-email {
+    width: calc(100% - 2px);
+    background: #C0E02E;
+  }
+  
+  .subscription .submit-email .before-submit,
+  .subscription .submit-email .after-submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 38px;
+    transition: visibility .35s ease-in-out,
+      opacity .35s ease-in-out;
+  }
+  
+  .subscription.done .submit-email .before-submit,
+  .subscription:not(.done) .submit-email .after-submit {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .subscription .submit-email .after-submit {
+    transition-delay: .35s;
+  }
+  
+  .subscription:not(.done) .submit-email .before-submit,
+  .subscription.done .submit-email .after-submit {
+    visibility: visible;
+    opacity: 1;
+  }
 
 .links {
     display: grid;

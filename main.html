@@ -323,7 +323,7 @@
     <div class="container-fluid bg-black" id="footer-container">
         <footer>
             <div class="container">
-                <div class="row">
+                <div class="row last-container">
                     <div class="col mt-5">
                         <div class="products text-light">
                             <h4 class="fw-bold text-uppercase">Top Products</h4>
@@ -347,11 +347,16 @@
                             <h4 class="fw-bold text-uppercase">Newsletter</h4>
                             <p>You can trust us. we only send promo offers, not a single.
                             </p>
-                            <div class="form-group">
-                                <form action="hello">
-                                    <input type="email" id="email" placeholder="email">
-                                    <button class="btn text-uppercase text-light">Subscribe now</button>
-                                </form>
+                            <div class="sub-container mt-5">
+                                <div class="sub-content">
+                                    <form class="subscription">
+                                        <input class="add-email" type="email" placeholder="subscribe@me.now">
+                                        <button class="submit-email" type="button">
+                                            <span class="before-submit">Subscribe</span>
+                                            <span class="after-submit">Thank you for subscribing!</span>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -372,5 +377,6 @@
             </div>
         </footer>
     </div>
+    <script src="/Javascript/subscribe.js"></script>
 </body>
 </html>
