@@ -40,10 +40,15 @@ body {
 }
 
 .form-group {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 20px;
     padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-group {
+        display: grid;
+    }
 }
 
 .form-control:focus {
